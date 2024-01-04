@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <control v-model="val"></control>
+    <Effect />
   </div>
 </template>
 
