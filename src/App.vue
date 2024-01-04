@@ -5,6 +5,7 @@
     <button @click="synth.releaseAll()">panic</button>
     <button @click="console.log(synth)">log synth</button>
     <control v-model="val"></control>
+    <KnobV2 v-model="knob" :domain="[0, 5]" size="100px" />
   </div>
 </template>
 
