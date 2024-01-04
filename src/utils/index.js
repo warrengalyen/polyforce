@@ -40,3 +40,15 @@ export function debounce(func, wait = 100) {
 export function roundToNearest(num, val) {
   return Math.round(num / val) * val;
 }
+
+export function getPropertyFromItem(item, property, fallback) {
+  if (property == null) return item === undefined ? fallback : item;
+
+  if (item !== Object(item)) return fallback === undefined ? item : fallback;
+
+  if (typeof property === "string") return item[property];
+
+  const value = property(item, fallback);
+
+  return typeof value === "undefined" ? fallback : value;
+}
