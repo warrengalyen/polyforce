@@ -1,6 +1,10 @@
 <template>
   <div id="app">
     <Effect />
+    <piano @onKeyUp="onKeyUp" @onKeyDown="onKeyDown"></piano>
+    <button @click="synth.releaseAll()">panic</button>
+    <button @click="console.log(synth)">log synth</button>
+    <control v-model="val"></control>
   </div>
 </template>
 
