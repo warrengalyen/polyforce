@@ -1,5 +1,6 @@
 const path = require("path");
 module.exports = {
+  publicPath: process.env.NODE_ENV === "production" ? "/polyforce/" : "/",
   assetsDir: "src/assets/",
   // sass-node config with vue-cli-4
   // https://stackoverflow.com/a/59537228/10922608
